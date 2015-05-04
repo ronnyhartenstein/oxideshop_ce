@@ -987,7 +987,7 @@ class oxSysRequirements
      *     $sGroup       - group of module
      *     $sModuleName  - name of checked module
      *     $sModuleState - module state:
-     *       -1 - unable to datect, should not block
+     *       -1 - unable to detect, should not block
      *        0 - missing, blocks setup
      *        1 - fits min requirements
      *        2 - exists required or better
