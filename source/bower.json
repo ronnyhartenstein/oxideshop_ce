@@ -1,0 +1,8 @@
+{
+  "name": "oxideshop_ce",
+  "version": "4.9.99",
+  "devDependencies": {
+    "bootstrap": "^3.3.4"
+  },
+  "private": true
+}
