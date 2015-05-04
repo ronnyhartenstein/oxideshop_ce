@@ -1,0 +1,62 @@
+
+
+
+// Bootstrap Grid container for page
+#page {
+   width: 100%;
+
+  // poorly don't work
+  //&:extend(.container);
+
+  // .container
+  .container-fixed();
+
+  @media (min-width: @screen-sm-min) {
+    width: @container-sm;
+  }
+  @media (min-width: @screen-md-min) {
+    width: @container-md;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: @container-lg;
+  }
+
+}
+
+// header + footer are inside page, so let it be 100%
+#header, #footer {
+  width: 100%;
+}
+
+// content is inside page, should be "neutral" in size, so each block fits ...
+div.sidebarLeft #content, div.sidebarRight #content {
+  width: auto;
+}
+#content {
+  display: inline;
+}
+
+// --- Sidebar ---
+
+#sidebar {
+  width: 100%;
+  // won't work, because col-*-* is calculated in mixins, so we have to do it with js
+  //&:extend(.col-lg-2, .col-md-3, .col-sm-4) {};
+
+  @media (min-width: @screen-sm-min) {
+    .make-sm-column(4);
+  }
+  @media (min-width: @screen-md-min) {
+    .make-md-column(3);
+  }
+  @media (min-width: @screen-lg-min) {
+    .make-lg-column(2);
+  }
+
+  //&:extend(.pull-right) {};
+}
+
+.box {
+  width: 100%;
+}
+
