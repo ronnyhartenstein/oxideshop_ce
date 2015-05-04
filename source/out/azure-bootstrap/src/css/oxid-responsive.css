@@ -743,13 +743,18 @@
 #header,
 #footer {
   width: 100%;
+  padding: 0;
 }
-div.sidebarLeft #content,
-div.sidebarRight #content {
-  width: auto;
+#footer #panel {
+  margin: 0;
 }
-#content {
-  display: inline;
+#navigation {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  #logo img {
+    width: 50%;
+  }
 }
 #sidebar {
   width: 100%;
@@ -760,6 +765,10 @@ div.sidebarRight #content {
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 @media (min-width: 768px) and (min-width: 768px) {
@@ -774,6 +783,10 @@ div.sidebarRight #content {
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 @media (min-width: 992px) and (min-width: 992px) {
@@ -788,6 +801,10 @@ div.sidebarRight #content {
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 @media (min-width: 1200px) and (min-width: 1200px) {
@@ -796,8 +813,88 @@ div.sidebarRight #content {
     width: 16.66666667%;
   }
 }
+/*div.sidebarLeft #sidebar {
+  margin-left: -15px;
+}
+div.sidebarRight #sidebar {
+  margin-right: -15px;
+}
+*/
 .box {
   width: 100%;
+}
+div.sidebarLeft #content,
+div.sidebarRight #content {
+  width: auto;
+}
+#content {
+  float: none;
+}
+#content > h2.sectionHead {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  #content > h2.sectionHead {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  #content > h2.sectionHead {
+    float: left;
+    width: 58.33333333%;
+  }
+}
+@media (min-width: 992px) {
+  #content > h2.sectionHead {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 992px) and (min-width: 992px) {
+  #content > h2.sectionHead {
+    float: left;
+    width: 66.66666667%;
+  }
+}
+@media (min-width: 1200px) {
+  #content > h2.sectionHead {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 1200px) and (min-width: 1200px) {
+  #content > h2.sectionHead {
+    float: left;
+    width: 75%;
+  }
+}
+@media (max-width: 767px) {
+  #content > h2.sectionHead:before,
+  #content > h2.sectionHead:after {
+    content: " ";
+    display: table;
+  }
+  #content > h2.sectionHead:after {
+    clear: both;
+  }
+  #content > h2.sectionHead:before,
+  #content > h2.sectionHead:after {
+    content: " ";
+    display: table;
+  }
+  #content > h2.sectionHead:after {
+    clear: both;
+  }
+}
+.oxSlider {
+  padding: 0;
 }
 /*
 div.anythingSlider {
@@ -833,7 +930,7 @@ ul.anythingBase li.panel {
 @media (min-width: 768px) and (min-width: 768px) {
   .itemSlider {
     float: left;
-    width: 66.66666667%;
+    width: 58.33333333%;
   }
 }
 @media (min-width: 992px) {
@@ -845,83 +942,74 @@ ul.anythingBase li.panel {
   }
 }
 @media (min-width: 992px) and (min-width: 992px) {
+  .itemSlider {
+    float: left;
+    width: 66.66666667%;
+  }
+}
+@media (min-width: 1200px) {
+  .itemSlider {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 1200px) and (min-width: 1200px) {
   .itemSlider {
     float: left;
     width: 75%;
   }
 }
-@media (min-width: 1200px) {
-  .itemSlider {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-@media (min-width: 1200px) and (min-width: 1200px) {
-  .itemSlider {
-    float: left;
-    width: 83.33333333%;
-  }
+#manufacturerSlider {
+  width: 100% !important;
+  overflow: hidden;
 }
 .promoBoxes {
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media (min-width: 768px) {
-  .promoBoxes {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
+  /*width: 100%;
+
+  @media (min-width: @screen-sm-min) {
+    .make-sm-column(7);
   }
-}
-@media (min-width: 768px) and (min-width: 768px) {
-  .promoBoxes {
-    float: left;
-    width: 66.66666667%;
+  @media (min-width: @screen-md-min) {
+    .make-md-column(8);
   }
+  @media (min-width: @screen-lg-min) {
+    .make-lg-column(10);
+  }*/
+  display: inline;
 }
-@media (min-width: 992px) {
+@media (max-width: 767px) {
   .promoBoxes {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
+    display: block;
   }
-}
-@media (min-width: 992px) and (min-width: 992px) {
-  .promoBoxes {
-    float: left;
-    width: 66.66666667%;
+  .promoBoxes:before,
+  .promoBoxes:after {
+    content: " ";
+    display: table;
   }
-}
-@media (min-width: 1200px) {
-  .promoBoxes {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
+  .promoBoxes:after {
+    clear: both;
   }
-}
-@media (min-width: 1200px) and (min-width: 1200px) {
-  .promoBoxes {
-    float: left;
-    width: 83.33333333%;
+  .promoBoxes:before,
+  .promoBoxes:after {
+    content: " ";
+    display: table;
+  }
+  .promoBoxes:after {
+    clear: both;
   }
 }
 .specBox,
 .specCatBox {
   position: relative;
   float: left;
-  width: 50%;
+  width: 100%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  padding-left: 0;
+  padding-bottom: 10px;
 }
 @media (min-width: 768px) {
   .specBox,
@@ -930,13 +1018,14 @@ ul.anythingBase li.panel {
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
+    padding-left: 0;
   }
 }
 @media (min-width: 768px) and (min-width: 768px) {
   .specBox,
   .specCatBox {
     float: left;
-    width: 33.33333333%;
+    width: 25%;
   }
 }
 @media (min-width: 992px) {
@@ -946,6 +1035,7 @@ ul.anythingBase li.panel {
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
+    padding-left: 0;
   }
 }
 @media (min-width: 992px) and (min-width: 992px) {
@@ -962,6 +1052,7 @@ ul.anythingBase li.panel {
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
+    padding-left: 0;
   }
 }
 @media (min-width: 1200px) and (min-width: 1200px) {
@@ -971,23 +1062,47 @@ ul.anythingBase li.panel {
     width: 41.66666667%;
   }
 }
+@media (min-width: 768px) {
+  .specCatBox {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-left: 0;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .specCatBox {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+/*
+.specCatBox {
+  @media (min-width: @screen-md-min) {
+    .make-md-column(4);
+  }
+}*/
 .specBoxTitles {
   width: 100%;
 }
 .specBoxInfo {
   width: 100%;
 }
-body {
-  background-color: rgba(255, 255, 0, 0.32);
+.specBox h3 {
+  width: 100%;
+  padding: 0;
 }
-#page {
-  border: 1px solid red;
-  background-color: white;
+.specBoxTitles a.title {
+  width: 100%;
+  padding: 0;
 }
-#header,
-footer {
-  border: 1px solid blue;
+.specBoxInfo .price {
+  width: 100%;
 }
-#sidebar {
-  border: 1px solid green;
+.specCatBox > img {
+  width: 100%;
+}
+.specCatBox {
+  float: right;
 }

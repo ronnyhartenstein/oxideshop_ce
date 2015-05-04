@@ -2,6 +2,7 @@
 [{capture append="oxidBlock_pageHead"}]
 <meta http-equiv="Content-Type" content="text/html; charset=[{$oView->getCharSet()}]">
     <title>[{block name="head_title"}][{$oView->getPageTitle()}][{/block}]</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
     [{block name="head_meta_robots"}]
