@@ -14,9 +14,15 @@
 # Composer
 /source/vendor/
 
+# Bower
+/source/bower_components/
+
 # Testing library
 /source/test_config.yml
 /source/Services/
+
+# Docker Logs
+/docker/apache2logs
 
 # IDE
 /.idea/
